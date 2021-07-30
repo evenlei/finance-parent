@@ -1,0 +1,31 @@
+server:
+  port: 9999
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    initialSize: 1
+    maxActive: 20
+    maxOpenPreparedStatements: 20
+    maxWait: 60000
+    minEvictableIdleTimeMillis: 300000
+    minIdle: 1
+    password: uNdvlOK5vMkqU6Xx15vtmEDdxzniQiuE
+    poolPreparedStatements: true
+    testOnBorrow: false
+    testOnReturn: false
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.137.7:3306/village_cadre?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
+    username: dangjian
+    validationQuery: select 'x'
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: id_worker
+  mapper-locations: classpath:mapping/**/*.xml
+  type-aliases-package: com.limin.manager.*.entity
